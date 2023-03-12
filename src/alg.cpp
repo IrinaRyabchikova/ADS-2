@@ -33,9 +33,9 @@ return ans;
 
 double sinn(double x, uint16_t count) {
   double sign = 1.0;
-  double ans = 0;
+  double ans = 0.0;
   for (uint16_t i = 0; i < count; i++) {
-    ans += sign * calcItem(x, 2 * i + 1);
+    ans += calcItem(x, 2 * i + 1) * sign;
     sign *= -1.0;
   }
   return ans;
@@ -43,9 +43,9 @@ double sinn(double x, uint16_t count) {
 
 double cosn(double x, uint16_t count) {
   double sign = 1.0;
-  double ans = 0;
+  double ans = 0.0;
   for (uint16_t i = 0; i < count; i++) {
-    ans += sign * calcItem(x, 2 * i);
+    ans += calcItem(x, 2 * i) * sign;
     sign *= -1.0;
   }
   return ans;
