@@ -23,18 +23,18 @@ double calcItem(double x, uint16_t n) {
   return pown(x, n) / fact(n);
 }
 
-double expn(double x, uint16_t count) 
-  double e = 0.0;
-  for (i = 0; i <= count; i++) {
-    e += calcItem(x, i);
+double expn(double x, uint16_t count) {
+  double ans = 0.0;
+  for (uint16_t i = 0; i <= count; i++) {
+    ans += calcItem(x, i);
   }
-return e;
+return ans;
 }
 
 double sinn(double x, uint16_t count) {
   double sign = 1.0;
   double ans = 0;
-  for (i = 0; i < count; i++) {
+  for (uint16_t i = 0; i < count; i++) {
     ans += sign * calcItem(x, 2 * i + 1);
     sign *= -1.0;
   }
@@ -44,7 +44,7 @@ double sinn(double x, uint16_t count) {
 double cosn(double x, uint16_t count) {
   double sign = 1.0;
   double ans = 0;
-  for (i = 0; i < count; i++) {
+  for (uint16_t i = 0; i < count; i++) {
     ans += sign * calcItem(x, 2 * i);
     sign *= -1.0;
   }
